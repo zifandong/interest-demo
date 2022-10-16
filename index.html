@@ -14,9 +14,16 @@
 </head>
 <body>
 	<canvas id="particale-canvas" width="1000px" height="500px"></canvas>
-
+	<audio id="musicplayer" autoplay>
+		<source src="music/birthday.mp3">
+	  </audio>
 	<!-- <script src="particaleTurns.js"></script> -->
 	<script>
+		// document.querySelector("audio").play();
+		// console.log(document.querySelector("audio").play());
+	</script>
+	<script>
+		// document.getElementById('music').play()
 		//构造函数
 		function Particale({warp, imgsUrl, radius}) {
 			this.warp = warp;		//画布
