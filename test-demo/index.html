@@ -17,10 +17,19 @@
 	<audio id="musicplayer" autoplay>
 		<source src="music/birthday.mp3">
 	  </audio>
-	<!-- <script src="particaleTurns.js"></script> -->
 	<script>
-		// document.querySelector("audio").play();
-		// console.log(document.querySelector("audio").play());
+		const isMobile = window.matchMedia("(pointer:coarse)").matches;
+		const audio=document.querySelector("audio")
+		if(isMobile){
+			document.querySelector('body').addEventListener('touchstart',(e)=>{
+			audio.play()
+		})
+		}else{
+			document.querySelector('body').addEventListener('mousedown',(e)=>{
+			audio.play()
+		})
+		}
+		
 	</script>
 	<script>
 		// document.getElementById('music').play()
